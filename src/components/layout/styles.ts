@@ -13,6 +13,13 @@ export const LayoutContainer = styled.div`
     background-color: black;
     grid-column: 1/4;
     grid-row: 1/2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
   }
 
   .left-side-bar {
