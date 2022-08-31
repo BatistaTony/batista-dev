@@ -6,7 +6,7 @@ export const HeroContainer = styled.div`
 
 export const InfoContainer = styled.div`
   margin-left: 115px;
-  margin-top: 183px;
+  margin-top: 100px;
 `;
 
 export const GreetingsText = styled.p`
