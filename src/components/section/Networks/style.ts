@@ -1,7 +1,18 @@
 import styled from "styled-components";
 
 export const NetworksContainer = styled.div`
-  width: 30px;
-  height: 60vh;
-  background: ${(props) => props.theme.colors.bg};
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const NetWorkItem = styled.div`
+  width: 40px;
+  height: 40px;
+  background: ${(props) => props.theme.colors.primaryWhite};
+  border-radius: 8px;
+  margin-bottom: 15px;
+  cursor: pointer;
 `;

@@ -18,7 +18,7 @@ export const MenuHamburguerContainer = styled.div<MenuHamburguerContainerProps>`
   .line-3 {
     width: 35px;
     height: 5px;
-    background: white;
+    background: ${(props) => props.theme.colors.primaryWhite};
     transition: transform 0.5s;
   }
 

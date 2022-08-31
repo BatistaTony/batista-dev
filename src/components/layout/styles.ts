@@ -10,7 +10,6 @@ export const LayoutContainer = styled.div`
   .navbar {
     width: 100%;
     height: 100%;
-    background-color: black;
     grid-column: 1/4;
     grid-row: 1/2;
     display: flex;
@@ -25,18 +24,17 @@ export const LayoutContainer = styled.div`
   .left-side-bar {
     width: 100%;
     height: 100%;
-    background-color: yellow;
     grid-column: 1/2;
     grid-row: 2/3;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
   }
 
   .content {
     width: 100%;
     height: 100%;
-    background-color: green;
     grid-column: 2/2;
     grid-row: 2/3;
   }
@@ -44,11 +42,25 @@ export const LayoutContainer = styled.div`
   .right-side-bar {
     width: 100%;
     height: 100%;
-    background-color: red;
     grid-column: 3/3;
     grid-row: 2/3;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
   }
+`;
+
+export const SiderBarLeft = styled.div`
+  height: 300px;
+  width: 10px;
+  background: ${(props) => props.theme.colors.primaryWhite};
+  margin-bottom: 40px;
+  border-radius: 5px;
+`;
+
+export const ButtonBarIndicator = styled.div`
+  width: 1px;
+  height: 200px;
+  background: ${(props) => props.theme.colors.primaryWhite};
 `;

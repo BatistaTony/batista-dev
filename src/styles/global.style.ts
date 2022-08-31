@@ -6,10 +6,15 @@ export const GlobalStyle = createGlobalStyle`
         padding:0;
         margin:0;
     }
+
+    body {
+      background-color: #0A192F;
+    }
 `;
 
 export const theme: DefaultTheme = {
   colors: {
-    bg: "#ddd",
+    bg: "#0A192F",
+    primaryWhite: "#d9d9d9",
   },
 };
