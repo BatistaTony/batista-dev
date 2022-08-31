@@ -55,12 +55,12 @@ export const SiderBarLeft = styled.div`
   height: 300px;
   width: 10px;
   background: ${(props) => props.theme.colors.primaryWhite};
-  margin-bottom: 40px;
   border-radius: 5px;
 `;
 
 export const ButtonBarIndicator = styled.div`
   width: 1px;
   height: 200px;
+  margin-top: 40px;
   background: ${(props) => props.theme.colors.primaryWhite};
 `;

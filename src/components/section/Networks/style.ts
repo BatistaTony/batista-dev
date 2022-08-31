@@ -13,6 +13,6 @@ export const NetWorkItem = styled.div`
   height: 40px;
   background: ${(props) => props.theme.colors.primaryWhite};
   border-radius: 8px;
-  margin-bottom: 15px;
+  margin-top: 15px;
   cursor: pointer;
 `;
