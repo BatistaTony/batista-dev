@@ -37,6 +37,11 @@ export const LayoutContainer = styled.div`
     height: 100%;
     grid-column: 2/2;
     grid-row: 2/3;
+    box-sizing: border-box;
+    padding: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 30px;
   }
 
   .right-side-bar {
