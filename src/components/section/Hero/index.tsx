@@ -17,7 +17,11 @@ const Hero = () => {
         <GreetingsText>Hello, Friend !, I'm</GreetingsText>
         <DevName>Batista Olivera</DevName>
         <DevRole>FullStack Developer</DevRole>
-        <HeroText>Something COOL HERE</HeroText>
+        <HeroText>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+          autem. Distinctio doloremque dolores natus consequatur. Inventore quo
+          adipisci tempora sequi.
+        </HeroText>
         <HeroButton>Play</HeroButton>
       </InfoContainer>
     </HeroContainer>

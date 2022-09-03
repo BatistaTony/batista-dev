@@ -4,10 +4,7 @@ export const HeroContainer = styled.div`
   box-sizing: border-box;
 `;
 
-export const InfoContainer = styled.div`
-  margin-left: 115px;
-  margin-top: 100px;
-`;
+export const InfoContainer = styled.div``;
 
 export const GreetingsText = styled.p`
   font-size: 2rem;
@@ -25,8 +22,10 @@ export const DevRole = styled.h1`
 `;
 
 export const HeroText = styled.p`
-  font-size: 2.5rem;
+  font-size: 1.2rem;
   color: ${(props) => props.theme.colors.primaryWhite};
+  margin-top: 15px;
+  width: 70%;
 `;
 
 export const HeroButton = styled.button`
