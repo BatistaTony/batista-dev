@@ -12,6 +12,7 @@ export const MenuHamburguerContainer = styled.div<MenuHamburguerContainerProps>`
   width: 40px;
   height: 30px;
   cursor: pointer;
+  z-index: 2;
 
   .line-1,
   .line-2,
@@ -37,3 +38,43 @@ export const MenuHamburguerContainer = styled.div<MenuHamburguerContainerProps>`
     width: ${({ open }) => (open ? "35px" : "25px")};
   }
 `;
+
+interface MenuContentContainerProps {
+  isActive: boolean;
+}
+
+export const MenuContentContainer = styled.div<MenuContentContainerProps>`
+  width: ${({ isActive }) => (isActive ? "500px" : "0")};
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #83b4b3;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+`;
+
+export const MenuContentList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+`;
+
+export const MenuContentListItem = styled.li`
+  font-weight: 550;
+  font-size: 1.5rem;
+  color: ${(props) => props.theme.colors.primaryWhite};
+  margin-bottom: 10px;
+  cursor: pointer;
+`;
+
+// #097392
+// #83b4b3
+// ##fff0ce
+// #d55534
+// #383838

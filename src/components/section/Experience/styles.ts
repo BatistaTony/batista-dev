@@ -41,12 +41,6 @@ interface ExperienceYearsItemProps {
   isActive: boolean;
 }
 
-// #097392
-// #83b4b3
-// ##fff0ce
-// #d55534
-// #383838
-
 export const ExperienceYearsItem = styled.div<ExperienceYearsItemProps>`
   width: 100%;
   height: 25px;
