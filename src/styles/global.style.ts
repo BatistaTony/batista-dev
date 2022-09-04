@@ -8,13 +8,24 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-      background-color: #0A192F;
+      background-color: #097392;
     }
 `;
 
 export const theme: DefaultTheme = {
   colors: {
     bg: "#0A192F",
-    primaryWhite: "#d9d9d9",
+    primaryWhite: "#fff",
   },
 };
+
+/*
+
+#097392
+#83b4b3
+##fff0ce
+#d55534
+#383838
+
+
+*/

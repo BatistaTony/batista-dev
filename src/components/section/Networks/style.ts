@@ -11,8 +11,15 @@ export const NetworksContainer = styled.div`
 export const NetWorkItem = styled.div`
   width: 40px;
   height: 40px;
-  background: ${(props) => props.theme.colors.primaryWhite};
+  background-color: ${(props) => props.theme.colors.primaryWhite};
   border-radius: 8px;
   margin-top: 15px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    transform: scale(1.6);
+  }
 `;
