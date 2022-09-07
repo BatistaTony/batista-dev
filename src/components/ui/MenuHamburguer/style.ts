@@ -44,7 +44,7 @@ interface MenuContentContainerProps {
 }
 
 export const MenuContentContainer = styled.div<MenuContentContainerProps>`
-  width: ${({ isActive }) => (isActive ? "500px" : "0")};
+  width: ${({ isActive }) => (isActive ? "400px" : "0")};
   height: 100vh;
   position: fixed;
   right: 0;
@@ -72,9 +72,3 @@ export const MenuContentListItem = styled.li`
   margin-bottom: 10px;
   cursor: pointer;
 `;
-
-// #097392
-// #83b4b3
-// ##fff0ce
-// #d55534
-// #383838

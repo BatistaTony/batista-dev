@@ -1,6 +1,5 @@
 import React from "react";
 import { NetworksContainer, NetWorkItem } from "./style";
-import { Work } from "react-iconly";
 import {
   TbBrandFacebook,
   TbBrandInstagram,

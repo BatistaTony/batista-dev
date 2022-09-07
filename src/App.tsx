@@ -1,23 +1,23 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import { Layout } from "./components/layout/layout";
-import About from "./components/section/About";
-import ExperienceHistory from "./components/section/Experience";
-import Hero from "./components/section/Hero";
 import { GlobalStyle, theme } from "./styles/global.style";
+import { Route, Routes } from "react-router-dom";
+import { AboutPage, ExperiencePage, HomePage } from "./pages";
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <div className="App">
-        <GlobalStyle />
-        <Layout>
-          {/* <Hero /> */}
-          {/* <About /> */}
-          <ExperienceHistory />
-        </Layout>
-      </div>
-    </ThemeProvider>
+    <div className="App">
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />{" "}
+        <Routes>
+          <Route path="/about" element={<AboutPage />} />
+
+          <Route path="/experience" element={<ExperiencePage />} />
+
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </ThemeProvider>{" "}
+    </div>
   );
 }
 
