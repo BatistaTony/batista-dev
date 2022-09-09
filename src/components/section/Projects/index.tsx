@@ -23,14 +23,20 @@ const Projects = () => {
             <ProjectsCardTitle>ANGOLA SO</ProjectsCardTitle>
             <ProjectsCardDescription>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Voluptatum dolor asperiores beatae.
+              Voluptatum dolor asperiores beatae. Lorem ipsum, dolor sit amet
+              consectetur adipisicing elit. Culpa quos reiciendis odit dolorem
+              totam error nostrum nulla deserunt, numquam excepturi ipsum sequi
+              quasi facilis doloremque iste debitis sit quae magnam.
             </ProjectsCardDescription>
             <ProjectsCardSkillsList>
               <ProjectsCardSkillsListItem>React</ProjectsCardSkillsListItem>
             </ProjectsCardSkillsList>
             <ProjectsCardFooter>
               <ProjectsCardLinkList>
-                <ProjectsCardLinkListItem>someth</ProjectsCardLinkListItem>
+                <ProjectsCardLinkListItem />
+                <ProjectsCardLinkListItem />
+                <ProjectsCardLinkListItem />
+                <ProjectsCardLinkListItem />
               </ProjectsCardLinkList>
             </ProjectsCardFooter>
           </ProjectsCard>
