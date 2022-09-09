@@ -1,4 +1,5 @@
 import React from "react";
+import { Navbar } from "../section/Navbar";
 import Networks from "../section/Networks";
 import Logo from "../ui/Logo";
 import MenuHumburguer from "../ui/MenuHamburguer";
@@ -12,11 +13,10 @@ export const Layout = ({ children }: LayoutProps) => {
   return (
     <LayoutContainer>
       <div className="navbar">
-        <Logo />
-        <MenuHumburguer />
+        <Navbar />
       </div>
       <div className="left-side-bar">
-        <SiderBarLeft></SiderBarLeft>
+        {/* <SiderBarLeft></SiderBarLeft> */}
         <ButtonBarIndicator />
       </div>
       <div className="content">{children}</div>

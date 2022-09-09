@@ -3,6 +3,7 @@ import { Layout } from "./components/layout/layout";
 import About from "./components/section/About";
 import ExperienceHistory from "./components/section/Experience";
 import Hero from "./components/section/Hero";
+import Projects from "./components/section/Projects";
 
 export const HomePage = () => (
   <Layout>
@@ -19,5 +20,11 @@ export const ExperiencePage = () => (
 export const AboutPage = () => (
   <Layout>
     <About />
+  </Layout>
+);
+
+export const ProjectsPage = () => (
+  <Layout>
+    <Projects />
   </Layout>
 );

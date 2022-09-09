@@ -19,6 +19,7 @@ export const LayoutContainer = styled.div`
     padding-left: 30px;
     padding-right: 30px;
     box-sizing: border-box;
+    background: transparent;
   }
 
   .left-side-bar {
@@ -42,6 +43,17 @@ export const LayoutContainer = styled.div`
     padding-left: 200px;
     padding-right: 200px;
     padding-bottom: 30px;
+    /* overflow: auto; */
+
+    /* &::-webkit-scrollbar {
+      background-color: transparent;
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: ${(props) => props.theme.colors.primaryWhite};
+      border-radius: 10px;
+    } */
   }
 
   .right-side-bar {

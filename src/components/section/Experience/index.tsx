@@ -12,6 +12,7 @@ import {
   ExperienceTitle,
   ExperienceYears,
   ExperienceYearsItem,
+  HistoryTimeLine,
 } from "./styles";
 
 const ExperienceHistory = () => {
@@ -79,9 +80,50 @@ const ExperienceHistory = () => {
     <ExperienceHistoryContainer>
       <ExperienceTitle>work experiences</ExperienceTitle>
       <ExperienceHistoryContainerContent>
+        <ExperienceContent>
+          <HistoryTimeLine>
+            <div className="time-line-start-dot" />
+            <div className="time-line-line" />
+            <div className="time-line-end-dot" />
+          </HistoryTimeLine>
+          <div className="time-content">
+            <ExperienceCompanyName>
+              {activeExperienceHistory.position} @
+              <a href={`${activeExperienceHistory.company.website}`}>
+                {activeExperienceHistory.company.name}
+              </a>
+            </ExperienceCompanyName>
+            <ExperienceCompanyTime>
+              {activeExperienceHistory.address} <div className="dot" />
+              {activeExperienceHistory.date.from} {" to "}
+              {activeExperienceHistory.date.to}
+              <div className="dot" />
+              {activeExperienceHistory.contractType}
+              {activeExperienceHistory.isRemote && (
+                <>
+                  <div className="dot" />
+                  {"[fully remote]"}
+                </>
+              )}
+            </ExperienceCompanyTime>
+            <ExperienceDescription>
+              {activeExperienceHistory.description.map((desc) => (
+                <ExperienceDescriptionItem>
+                  <div className="item-dot" />
+                  <p>{desc}</p>
+                </ExperienceDescriptionItem>
+              ))}
+            </ExperienceDescription>
+          </div>
+          <HistoryTimeLine className="time-line-right">
+            <div className="time-line-start-dot" />
+            <div className="time-line-line" />
+            <div className="time-line-end-dot" />
+          </HistoryTimeLine>
+        </ExperienceContent>
         <ExperienceYears>
           <div className="years-list">
-            <div className="sept-brdr" />
+            {/* <div className="sept-brdr" /> */}
             {experienceHistoryData.map((historyItem) => (
               <ExperienceYearsItem
                 onClick={() => chooseExperienceHistory(historyItem.id)}
@@ -89,39 +131,13 @@ const ExperienceHistory = () => {
                 key={historyItem.id}
               >
                 {historyItem.date.from}
+                {historyItem.id === activeExperienceHistory.id && (
+                  <div className="arrow-year" />
+                )}
               </ExperienceYearsItem>
             ))}
           </div>
         </ExperienceYears>
-        <ExperienceContent>
-          <ExperienceCompanyName>
-            {activeExperienceHistory.position} @
-            <a href={`${activeExperienceHistory.company.website}`}>
-              {activeExperienceHistory.company.name}
-            </a>
-          </ExperienceCompanyName>
-          <ExperienceCompanyTime>
-            {activeExperienceHistory.address} <div className="dot" />
-            {activeExperienceHistory.date.from} {" to "}
-            {activeExperienceHistory.date.to}
-            <div className="dot" />
-            {activeExperienceHistory.contractType}
-            {activeExperienceHistory.isRemote && (
-              <>
-                <div className="dot" />
-                {"[fully remote]"}
-              </>
-            )}
-          </ExperienceCompanyTime>
-          <ExperienceDescription>
-            {activeExperienceHistory.description.map((desc) => (
-              <ExperienceDescriptionItem>
-                <div className="item-dot" />
-                <p>{desc}</p>
-              </ExperienceDescriptionItem>
-            ))}
-          </ExperienceDescription>
-        </ExperienceContent>
       </ExperienceHistoryContainerContent>
     </ExperienceHistoryContainer>
   );
