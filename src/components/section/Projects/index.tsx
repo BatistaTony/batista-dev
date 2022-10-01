@@ -18,29 +18,31 @@ const Projects = () => {
     <ProjectsContainer>
       <ProjectsContainerTitle>Projects</ProjectsContainerTitle>
       <ProjectsList>
-        {[1, 2, 3, 3, 4, 5].map((card) => (
-          <ProjectsCard>
-            <ProjectsCardTitle>ANGOLA SO</ProjectsCardTitle>
-            <ProjectsCardDescription>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Voluptatum dolor asperiores beatae. Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Culpa quos reiciendis odit dolorem
-              totam error nostrum nulla deserunt, numquam excepturi ipsum sequi
-              quasi facilis doloremque iste debitis sit quae magnam.
-            </ProjectsCardDescription>
-            <ProjectsCardSkillsList>
-              <ProjectsCardSkillsListItem>React</ProjectsCardSkillsListItem>
-            </ProjectsCardSkillsList>
-            <ProjectsCardFooter>
-              <ProjectsCardLinkList>
-                <ProjectsCardLinkListItem />
-                <ProjectsCardLinkListItem />
-                <ProjectsCardLinkListItem />
-                <ProjectsCardLinkListItem />
-              </ProjectsCardLinkList>
-            </ProjectsCardFooter>
-          </ProjectsCard>
-        ))}
+        {[1, 2, 3, 3, 4, 5, , 3, 4, 35, 4, 53, 45, 34, 63, 653, 4].map(
+          (card) => (
+            <ProjectsCard>
+              <ProjectsCardTitle>ANGOLA SO</ProjectsCardTitle>
+              <ProjectsCardDescription>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptatum dolor asperiores beatae. Lorem ipsum, dolor sit amet
+                consectetur adipisicing elit. Culpa quos reiciendis odit dolorem
+                totam error nostrum nulla deserunt, numquam excepturi ipsum
+                sequi quasi facilis doloremque iste debitis sit quae magnam.
+              </ProjectsCardDescription>
+              <ProjectsCardSkillsList>
+                <ProjectsCardSkillsListItem>React</ProjectsCardSkillsListItem>
+              </ProjectsCardSkillsList>
+              <ProjectsCardFooter>
+                <ProjectsCardLinkList>
+                  <ProjectsCardLinkListItem />
+                  <ProjectsCardLinkListItem />
+                  <ProjectsCardLinkListItem />
+                  <ProjectsCardLinkListItem />
+                </ProjectsCardLinkList>
+              </ProjectsCardFooter>
+            </ProjectsCard>
+          )
+        )}
       </ProjectsList>
     </ProjectsContainer>
   );

@@ -1,31 +1,42 @@
 import { createGlobalStyle, DefaultTheme } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+
+
     * {
-        font-family:Arial, Helvetica, sans-serif;
+        font-family:'Lato', sans-serif;
         padding:0;
         margin:0;
+        -moz-box-sizing: inherit;
+       box-sizing: inherit;
+  -webkit-transition-property: all;
+          transition-property: all;
+  -webkit-transition-duration: .6s;
+          transition-duration: .6s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
     }
 
     body {
-      background-color: #097392;
+      background-color: #1e1d40;
     }
 `;
 
 export const theme: DefaultTheme = {
   colors: {
     bg: "#0A192F",
-    primaryWhite: "#fff",
+    primaryWhite: "#f2e6d8",
   },
 };
 
 /*
 
-#097392
-#83b4b3
-##fff0ce
-#d55534
-#383838
+
+#d90d32
+#1e1d40
+#1b65a6
+#4ab0d9
+#f2e6d8
 
 
 */

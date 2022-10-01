@@ -43,9 +43,11 @@ const About = () => {
           </AboutText>
 
           <AboutSkillsContainer>
-            {[12, 2, 2, 2, 3, 43, 3, , 534, 53, 45, 34, 53, 45].map((skill) => (
-              <SkillItem>React</SkillItem>
-            ))}
+            {[12, 2, 2, 2, 3, 43, 3, , 534, 53, 45, 34, 53, 45].map(
+              (skill, index) => (
+                <SkillItem key={index}>React</SkillItem>
+              )
+            )}
           </AboutSkillsContainer>
         </AboutInfoContainer>
         <AboutPictureContainer>

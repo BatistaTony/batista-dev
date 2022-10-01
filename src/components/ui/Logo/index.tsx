@@ -4,7 +4,7 @@ import { LogoContainer } from "./style";
 const Logo = () => {
   return (
     <LogoContainer>
-      <h1>Batista</h1>
+      <h1>Slatt Dev 🥷🏾</h1>
     </LogoContainer>
   );
 };

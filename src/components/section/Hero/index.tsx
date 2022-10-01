@@ -1,4 +1,5 @@
 import React from "react";
+import { CustomButton } from "../../ui/Button";
 
 import {
   DevName,
@@ -22,7 +23,7 @@ const Hero = () => {
           autem. Distinctio doloremque dolores natus consequatur. Inventore quo
           adipisci tempora sequi.
         </HeroText>
-        <HeroButton>Play</HeroButton>
+        <CustomButton>play my introduction</CustomButton>
       </InfoContainer>
     </HeroContainer>
   );

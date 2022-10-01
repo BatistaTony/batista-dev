@@ -115,15 +115,56 @@ const ExperienceHistory = () => {
               ))}
             </ExperienceDescription>
           </div>
-          <HistoryTimeLine className="time-line-right">
+          {/* <HistoryTimeLine className="time-line-right">
+            <div className="time-line-start-dot" />
+            <div className="time-line-line" />
+            <div className="time-line-end-dot" />
+          </HistoryTimeLine> */}
+        </ExperienceContent>
+
+        <ExperienceContent>
+          <HistoryTimeLine>
             <div className="time-line-start-dot" />
             <div className="time-line-line" />
             <div className="time-line-end-dot" />
           </HistoryTimeLine>
+          <div className="time-content">
+            <ExperienceCompanyName>
+              {activeExperienceHistory.position} @
+              <a href={`${activeExperienceHistory.company.website}`}>
+                {activeExperienceHistory.company.name}
+              </a>
+            </ExperienceCompanyName>
+            <ExperienceCompanyTime>
+              {activeExperienceHistory.address} <div className="dot" />
+              {activeExperienceHistory.date.from} {" to "}
+              {activeExperienceHistory.date.to}
+              <div className="dot" />
+              {activeExperienceHistory.contractType}
+              {activeExperienceHistory.isRemote && (
+                <>
+                  <div className="dot" />
+                  {"[fully remote]"}
+                </>
+              )}
+            </ExperienceCompanyTime>
+            <ExperienceDescription>
+              {activeExperienceHistory.description.map((desc) => (
+                <ExperienceDescriptionItem>
+                  <div className="item-dot" />
+                  <p>{desc}</p>
+                </ExperienceDescriptionItem>
+              ))}
+            </ExperienceDescription>
+          </div>
+          {/* <HistoryTimeLine className="time-line-right">
+            <div className="time-line-start-dot" />
+            <div className="time-line-line" />
+            <div className="time-line-end-dot" />
+          </HistoryTimeLine> */}
         </ExperienceContent>
-        <ExperienceYears>
+        {/* <ExperienceYears>
           <div className="years-list">
-            {/* <div className="sept-brdr" /> */}
             {experienceHistoryData.map((historyItem) => (
               <ExperienceYearsItem
                 onClick={() => chooseExperienceHistory(historyItem.id)}
@@ -137,7 +178,7 @@ const ExperienceHistory = () => {
               </ExperienceYearsItem>
             ))}
           </div>
-        </ExperienceYears>
+        </ExperienceYears> */}
       </ExperienceHistoryContainerContent>
     </ExperienceHistoryContainer>
   );

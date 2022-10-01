@@ -9,9 +9,7 @@ export const LayoutContainer = styled.div`
 
   .navbar {
     width: 100%;
-    height: 100%;
-    grid-column: 1/4;
-    grid-row: 1/2;
+    height: 90px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -20,10 +18,15 @@ export const LayoutContainer = styled.div`
     padding-right: 30px;
     box-sizing: border-box;
     background: transparent;
+    position: fixed;
+    top: 0;
+    transition: top 0.3s;
+    z-index: 5;
+    background: #d90d32;
   }
 
   .left-side-bar {
-    width: 100%;
+    width: 80px;
     height: 100%;
     grid-column: 1/2;
     grid-row: 2/3;
@@ -31,6 +34,10 @@ export const LayoutContainer = styled.div`
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
   }
 
   .content {
@@ -43,21 +50,10 @@ export const LayoutContainer = styled.div`
     padding-left: 200px;
     padding-right: 200px;
     padding-bottom: 30px;
-    /* overflow: auto; */
-
-    /* &::-webkit-scrollbar {
-      background-color: transparent;
-      width: 10px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: ${(props) => props.theme.colors.primaryWhite};
-      border-radius: 10px;
-    } */
   }
 
   .right-side-bar {
-    width: 100%;
+    width: 80px;
     height: 100%;
     grid-column: 3/3;
     grid-row: 2/3;
@@ -65,6 +61,10 @@ export const LayoutContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
   }
 `;
 

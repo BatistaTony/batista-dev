@@ -6,17 +6,28 @@ import {
   MenuContentListItem,
 } from "./style";
 
-const MENU_ITEMS = [
-  "Home",
-  "About",
-  "Work Experience",
-  "Projects",
-  "Blog Posts",
-  "Contact",
+import { useNavigate } from "react-router-dom";
+
+type MENU_ITEMSTYPE = {
+  title: string;
+  route: string;
+};
+const MENU_ITEMS: MENU_ITEMSTYPE[] = [
+  { title: "Home", route: "" },
+  { title: "About", route: "about" },
+  { title: "Work Experience", route: "experience" },
+  { title: "Projects", route: "projects" },
+  { title: "Blog Posts", route: "blog-posts" },
+  { title: "Contact", route: "contact" },
 ];
 
 const MenuHumburguer = () => {
   const [toggle, setToggle] = useState(false);
+  const navigate = useNavigate();
+
+  const goTo = (path: string) => {
+    navigate(`/${path.toLowerCase()}`);
+  };
 
   return (
     <>
@@ -30,7 +41,12 @@ const MenuHumburguer = () => {
         {toggle && (
           <MenuContentList>
             {MENU_ITEMS.map((item) => (
-              <MenuContentListItem key={item}>{item}</MenuContentListItem>
+              <MenuContentListItem
+                onClick={() => goTo(item.route)}
+                key={item.title}
+              >
+                {item.title}
+              </MenuContentListItem>
             ))}
           </MenuContentList>
         )}

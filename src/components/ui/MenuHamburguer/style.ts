@@ -48,8 +48,8 @@ export const MenuContentContainer = styled.div<MenuContentContainerProps>`
   height: 100vh;
   position: fixed;
   right: 0;
-  top: 0;
-  background-color: #83b4b3;
+  bottom: 0;
+  background-color: #1d3461;
   z-index: 1;
   display: flex;
   align-items: center;

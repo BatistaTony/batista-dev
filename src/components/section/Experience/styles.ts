@@ -6,8 +6,8 @@ export const ExperienceHistoryContainer = styled.div`
 
 export const ExperienceHistoryContainerContent = styled.div`
   width: 100%;
-  display: grid;
-  grid-template-columns: auto 100px;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const ExperienceTitle = styled.div`
@@ -76,6 +76,11 @@ export const ExperienceContent = styled.div`
   display: grid;
   grid-template-columns: 15px auto 15px;
   margin-bottom: 50px;
+  background: #1e1d40;
+  padding: 10px;
+  padding-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px;
 
   .time-content {
     margin-left: 10px;
