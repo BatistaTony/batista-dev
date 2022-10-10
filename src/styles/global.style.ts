@@ -2,8 +2,10 @@ import { createGlobalStyle, DefaultTheme } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
+  
 
     * {
+      
         font-family:'Lato', sans-serif;
         padding:0;
         margin:0;
@@ -19,6 +21,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
       background-color: #1e1d40;
+   
     }
 `;
 

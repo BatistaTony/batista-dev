@@ -18,8 +18,13 @@ export const NetWorkItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s;
 
   svg {
     transform: scale(1.6);
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 `;

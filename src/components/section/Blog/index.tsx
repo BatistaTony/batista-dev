@@ -1,12 +1,29 @@
-import React from "react";
-import { ApolloClient, InMemoryCache, useQuery } from "@apollo/client";
-import gql from "graphql";
-
-const client = new ApolloClient({
-  cache: new InMemoryCache(),
-  uri: "https://api-us-east-1.hygraph.com/v2/cl4t44oso2vrf01yy0q3l12rj/master",
-});
+import React, { useState } from "react";
+import { Post } from "../../../typescript/types";
+import ArticleCard from "../../ui/ArticleCard";
+import { BlogContainer, BlogTitle, PostList } from "./styles";
 
 export const Blog = () => {
-  return <div>testing the hygraph data for my blog posts</div>;
+  const [posts, setPosts] = useState<Post[]>([
+    {
+      id: "353k5h4kjg",
+      author: "Batista Tone",
+      content: "",
+      date: new Date(),
+      title: "React for mobile applications",
+      topics: ["React", "Android", "ios", "redux", "context api"],
+    },
+  ]);
+
+  return (
+    <BlogContainer>
+      <BlogTitle>my posts</BlogTitle>
+
+      <PostList>
+        {posts.map((post) => (
+          <ArticleCard key={post.id} post={post} />
+        ))}
+      </PostList>
+    </BlogContainer>
+  );
 };

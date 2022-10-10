@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CustomButtonStyled = styled.div`
+export const CustomButtonContainer = styled.div`
   margin-top: 30px;
 
   .btnfos {
@@ -17,7 +17,9 @@ export const CustomButtonStyled = styled.div`
     vertical-align: middle;
     width: 100%;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
   }
   @media (min-width: 400px) {
     .btnfos {
@@ -47,12 +49,14 @@ export const CustomButtonStyled = styled.div`
     top: 0;
     width: 100%;
     height: 50px;
+    border-radius: 5px;
   }
   .btnfos-1 rect {
     fill: none;
     stroke: #fff;
-    stroke-width: 1;
+    stroke-width: 0;
     stroke-dasharray: 422, 0;
+    border-radius: 5px;
   }
 
   .btnfos-1:hover {
@@ -66,6 +70,7 @@ export const CustomButtonStyled = styled.div`
     stroke-dashoffset: 48;
     -webkit-transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
     transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    border-radius: 5px;
   }
 
   .btnfos-2 {
@@ -90,6 +95,7 @@ export const CustomButtonStyled = styled.div`
     -webkit-transition: all 280ms ease-in-out;
     transition: all 280ms ease-in-out;
     width: 0;
+    border-radius: 5px;
   }
 
   .btnfos-2:hover:after,
@@ -100,11 +106,13 @@ export const CustomButtonStyled = styled.div`
     -webkit-transition: width 350ms ease-in-out;
     transition: width 350ms ease-in-out;
     width: 70%;
+    border-radius: 5px;
   }
 
   .btnfos-2:hover:before {
     bottom: auto;
     top: 0;
     width: 70%;
+    border-radius: 5px;
   }
 `;

@@ -14,16 +14,18 @@ export const ProjectsContainerTitle = styled.h1`
 export const ProjectsList = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  padding-bottom: 50px;
 `;
 
 export const ProjectsCard = styled.div`
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 270px;
   background: ${(props) => props.theme.colors.primaryWhite};
   border-radius: 5px;
   padding: 20px;
+  padding-bottom: 0;
   box-sizing: border-box;
   margin-right: 30px;
   margin-bottom: 30px;
@@ -31,15 +33,16 @@ export const ProjectsCard = styled.div`
   overflow: hidden;
 `;
 
-export const ProjectsCardTitle = styled.h5`
+export const ProjectsCardTitle = styled.h1`
   font-size: 1.2rem;
+  font-weight: 700;
 `;
 
 export const ProjectsCardDescription = styled.p`
   font-size: 1rem;
   margin-top: 10px;
   width: 100%;
-  height: 165px;
+  height: 130px;
   text-overflow: ellipsis;
   white-space: pre-wrap;
   overflow: hidden;
@@ -55,7 +58,7 @@ export const ProjectsCardSkillsList = styled.ul`
 `;
 
 export const ProjectsCardSkillsListItem = styled.li`
-  background-color: #383838;
+  background-color: #1e1d40;
   font-size: 0.8rem;
   width: auto;
   color: ${(props) => props.theme.colors.primaryWhite};
@@ -63,12 +66,13 @@ export const ProjectsCardSkillsListItem = styled.li`
   border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;
+  margin-right: 10px;
 `;
 
 export const ProjectsCardFooter = styled.div`
   height: 40px;
   width: 100%;
-  background: #383838;
+  background: #4ab0d9;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -87,9 +91,15 @@ export const ProjectsCardLinkList = styled.ul`
 `;
 
 export const ProjectsCardLinkListItem = styled.li`
-  width: 25px;
-  height: 25px;
-  border-radius: 8px;
-  background-color: ${(props) => props.theme.colors.primaryWhite};
-  margin-left: 10px;
+  a {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: ${(props) => props.theme.colors.primaryWhite};
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;

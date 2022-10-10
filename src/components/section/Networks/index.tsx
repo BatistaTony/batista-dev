@@ -1,5 +1,5 @@
 import React from "react";
-import { NetworksContainer, NetWorkItem } from "./style";
+import { NetworksContainer, NetWorkItem } from "./styles";
 import {
   TbBrandFacebook,
   TbBrandInstagram,

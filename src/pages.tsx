@@ -4,6 +4,7 @@ import About from "./components/section/About";
 import ExperienceHistory from "./components/section/Experience";
 import Hero from "./components/section/Hero";
 import Projects from "./components/section/Projects";
+import { Blog } from "./components/section/Blog";
 
 export const HomePage = () => (
   <Layout>
@@ -26,5 +27,11 @@ export const AboutPage = () => (
 export const ProjectsPage = () => (
   <Layout>
     <Projects />
+  </Layout>
+);
+
+export const BlogPage = () => (
+  <Layout>
+    <Blog />
   </Layout>
 );

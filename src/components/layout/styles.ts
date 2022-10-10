@@ -21,7 +21,7 @@ export const LayoutContainer = styled.div`
     position: fixed;
     top: 0;
     transition: top 0.3s;
-    z-index: 5;
+    z-index: 7;
     background: #d90d32;
   }
 

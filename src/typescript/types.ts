@@ -20,3 +20,22 @@ export enum ContractType {
   "Parttime" = "Part time",
   "Freelancer" = "Freelancer",
 }
+
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  tools: string[];
+  github: string;
+  liveUrl: string;
+  owner?: string;
+}
+
+export interface Post {
+  id: string;
+  author: string;
+  date: Date | string;
+  title: string;
+  topics: string[];
+  content: unknown;
+}

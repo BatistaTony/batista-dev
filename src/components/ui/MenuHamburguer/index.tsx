@@ -4,7 +4,7 @@ import {
   MenuContentContainer,
   MenuContentList,
   MenuContentListItem,
-} from "./style";
+} from "./styles";
 
 import { useNavigate } from "react-router-dom";
 
@@ -17,7 +17,7 @@ const MENU_ITEMS: MENU_ITEMSTYPE[] = [
   { title: "About", route: "about" },
   { title: "Work Experience", route: "experience" },
   { title: "Projects", route: "projects" },
-  { title: "Blog Posts", route: "blog-posts" },
+  { title: "Blog Posts", route: "blog" },
   { title: "Contact", route: "contact" },
 ];
 

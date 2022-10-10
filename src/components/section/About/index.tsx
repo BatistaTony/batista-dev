@@ -13,6 +13,13 @@ import {
 } from "./styles";
 
 const About = () => {
+  const skills = [
+    { title: "React", icon: "react-original" },
+    { title: "Typescript", icon: "typescript-original" },
+    { title: "Javascript", icon: "javascript-plain" },
+    { title: "Redux", icon: "redux-original" },
+  ];
+
   return (
     <AboutContainer>
       <AboutContentContainer>
@@ -43,11 +50,12 @@ const About = () => {
           </AboutText>
 
           <AboutSkillsContainer>
-            {[12, 2, 2, 2, 3, 43, 3, , 534, 53, 45, 34, 53, 45].map(
-              (skill, index) => (
-                <SkillItem key={index}>React</SkillItem>
-              )
-            )}
+            {skills.map((skill) => (
+              <SkillItem key={skill.title}>
+                <i className={`devicon-${skill.icon}`}></i>
+                {skill.title}
+              </SkillItem>
+            ))}
           </AboutSkillsContainer>
         </AboutInfoContainer>
         <AboutPictureContainer>

@@ -2,7 +2,13 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, theme } from "./styles/global.style";
 import { Route, Routes } from "react-router-dom";
-import { AboutPage, ExperiencePage, HomePage, ProjectsPage } from "./pages";
+import {
+  AboutPage,
+  BlogPage,
+  ExperiencePage,
+  HomePage,
+  ProjectsPage,
+} from "./pages";
 
 function App() {
   return (
@@ -17,6 +23,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
 
           <Route path="/projects" element={<ProjectsPage />} />
+
+          <Route path="/blog" element={<BlogPage />} />
         </Routes>
       </ThemeProvider>{" "}
     </div>

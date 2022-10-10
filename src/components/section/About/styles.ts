@@ -51,19 +51,24 @@ export const AboutSkillsContainer = styled.div`
 
 export const SkillItem = styled.div`
   margin-right: 15px;
-  background: ${(props) => props.theme.colors.primaryWhite};
-  height: 25px;
+  background: #1b65a6;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
   border-radius: 5px;
   margin-bottom: 15px;
   font-size: 1rem;
   text-align: left;
   margin-bottom: 15px;
-  color: black;
+  color: ${(props) => props.theme.colors.primaryWhite};
+
+  i {
+    font-size: 0.9rem;
+    margin-right: 5px;
+  }
 `;
 
 export const AboutPictureContainer = styled.div`
@@ -90,12 +95,12 @@ export const Picture = styled.div<BehindPictureProps>`
 `;
 
 export const BehindPicture = styled.div`
-  width: 250px;
-  height: 250px;
-  background: green;
+  width: 280px;
+  height: 280px;
+  background: transparent;
+  border: 2px solid #4ab0d9;
   border-radius: 6px;
   position: absolute;
-  background: #342e2e;
-  margin-left: 20px;
-  margin-top: 20px;
+  margin-left: -15px;
+  margin-top: -15px;
 `;

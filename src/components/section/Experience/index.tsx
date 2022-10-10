@@ -10,15 +10,34 @@ import {
   ExperienceDescription,
   ExperienceDescriptionItem,
   ExperienceTitle,
-  ExperienceYears,
-  ExperienceYearsItem,
   HistoryTimeLine,
 } from "./styles";
+import { GoLocation } from "react-icons/go";
 
 const ExperienceHistory = () => {
   const [experienceHistoryData, setExperienceHistoryData] = useState<
     ExperienceHistoryType[]
   >([
+    {
+      id: "2",
+      company: { name: "Hero99", website: "https://www.hero99.com.br" },
+      position: "Front End Developer",
+      date: {
+        from: "2021",
+        to: "2022",
+      },
+      description: [
+        "Translate the UI made by designer to a functional web application.",
+        "Do a pair programming with team to solve issues.",
+        "Refactor a lot of components on production.",
+        "Improve existent code of some components, adding clean code and make more reusable components.",
+        "Meeting with designer’s team to discuss ideas of new features.",
+        "Write tests for components.",
+      ],
+      address: "Brasil, Curitiba",
+      isRemote: true,
+      contractType: ContractType.Fulltime,
+    },
     {
       id: "1",
       company: {
@@ -42,144 +61,58 @@ const ExperienceHistory = () => {
       isRemote: true,
       contractType: ContractType.Fulltime,
     },
-    {
-      id: "2",
-      company: { name: "Hero99", website: "https://www.hero99.com.br" },
-      position: "Front End Developer",
-      date: {
-        from: "2021",
-        to: "2022",
-      },
-      description: [
-        "Translate the UI made by designer to a functional web application.",
-        "Do a pair programming with team to solve issues.",
-        "Refactor a lot of components on production.",
-        "Improve existent code of some components, adding clean code and make more reusable components.",
-        "Meeting with designer’s team to discuss ideas of new features.",
-        "Write tests for components.",
-      ],
-      address: "Brasil, Curitiba",
-      isRemote: true,
-      contractType: ContractType.Fulltime,
-    },
   ]);
-
-  const [activeExperienceHistory, setActiveExperienceHistory] = useState<
-    ExperienceHistoryType
-  >(experienceHistoryData[0]);
-
-  const chooseExperienceHistory = (id: string) => {
-    const found = experienceHistoryData.find((exp) => exp.id === id);
-
-    if (found) {
-      setActiveExperienceHistory(found);
-    }
-  };
 
   return (
     <ExperienceHistoryContainer>
       <ExperienceTitle>work experiences</ExperienceTitle>
       <ExperienceHistoryContainerContent>
-        <ExperienceContent>
-          <HistoryTimeLine>
-            <div className="time-line-start-dot" />
-            <div className="time-line-line" />
-            <div className="time-line-end-dot" />
-          </HistoryTimeLine>
-          <div className="time-content">
-            <ExperienceCompanyName>
-              {activeExperienceHistory.position} @
-              <a href={`${activeExperienceHistory.company.website}`}>
-                {activeExperienceHistory.company.name}
-              </a>
-            </ExperienceCompanyName>
-            <ExperienceCompanyTime>
-              {activeExperienceHistory.address} <div className="dot" />
-              {activeExperienceHistory.date.from} {" to "}
-              {activeExperienceHistory.date.to}
-              <div className="dot" />
-              {activeExperienceHistory.contractType}
-              {activeExperienceHistory.isRemote && (
-                <>
-                  <div className="dot" />
-                  {"[fully remote]"}
-                </>
-              )}
-            </ExperienceCompanyTime>
-            <ExperienceDescription>
-              {activeExperienceHistory.description.map((desc) => (
-                <ExperienceDescriptionItem>
-                  <div className="item-dot" />
-                  <p>{desc}</p>
-                </ExperienceDescriptionItem>
-              ))}
-            </ExperienceDescription>
-          </div>
-          {/* <HistoryTimeLine className="time-line-right">
-            <div className="time-line-start-dot" />
-            <div className="time-line-line" />
-            <div className="time-line-end-dot" />
-          </HistoryTimeLine> */}
-        </ExperienceContent>
-
-        <ExperienceContent>
-          <HistoryTimeLine>
-            <div className="time-line-start-dot" />
-            <div className="time-line-line" />
-            <div className="time-line-end-dot" />
-          </HistoryTimeLine>
-          <div className="time-content">
-            <ExperienceCompanyName>
-              {activeExperienceHistory.position} @
-              <a href={`${activeExperienceHistory.company.website}`}>
-                {activeExperienceHistory.company.name}
-              </a>
-            </ExperienceCompanyName>
-            <ExperienceCompanyTime>
-              {activeExperienceHistory.address} <div className="dot" />
-              {activeExperienceHistory.date.from} {" to "}
-              {activeExperienceHistory.date.to}
-              <div className="dot" />
-              {activeExperienceHistory.contractType}
-              {activeExperienceHistory.isRemote && (
-                <>
-                  <div className="dot" />
-                  {"[fully remote]"}
-                </>
-              )}
-            </ExperienceCompanyTime>
-            <ExperienceDescription>
-              {activeExperienceHistory.description.map((desc) => (
-                <ExperienceDescriptionItem>
-                  <div className="item-dot" />
-                  <p>{desc}</p>
-                </ExperienceDescriptionItem>
-              ))}
-            </ExperienceDescription>
-          </div>
-          {/* <HistoryTimeLine className="time-line-right">
-            <div className="time-line-start-dot" />
-            <div className="time-line-line" />
-            <div className="time-line-end-dot" />
-          </HistoryTimeLine> */}
-        </ExperienceContent>
-        {/* <ExperienceYears>
-          <div className="years-list">
-            {experienceHistoryData.map((historyItem) => (
-              <ExperienceYearsItem
-                onClick={() => chooseExperienceHistory(historyItem.id)}
-                isActive={historyItem.id === activeExperienceHistory.id}
-                key={historyItem.id}
-              >
-                {historyItem.date.from}
-                {historyItem.id === activeExperienceHistory.id && (
-                  <div className="arrow-year" />
+        {experienceHistoryData.map((expData) => (
+          <ExperienceContent key={expData.id}>
+            <HistoryTimeLine>
+              <div className="years-time-line">
+                <p>{expData.date.to}</p>
+                <p>{expData.date.from}</p>
+              </div>
+              <div className="lines-t">
+                <div className="time-line-start-dot" />
+                <div className="time-line-line" />
+                <div className="time-line-end-dot" />
+              </div>
+            </HistoryTimeLine>
+            <div className="time-content">
+              <ExperienceCompanyName>
+                {expData.position} @
+                <a href={`${expData.company.website}`}>
+                  {expData.company.name}
+                </a>
+              </ExperienceCompanyName>
+              <ExperienceCompanyTime>
+                <span>
+                  <GoLocation /> {expData.address}
+                </span>{" "}
+                <div className="dot" />
+                <span> {expData.contractType}</span>
+                {expData.isRemote && (
+                  <>
+                    <div className="dot" />
+                    <span> {"[fully remote]"}</span>
+                  </>
                 )}
-              </ExperienceYearsItem>
-            ))}
-          </div>
-        </ExperienceYears> */}
-      </ExperienceHistoryContainerContent>
+              </ExperienceCompanyTime>
+
+              <ExperienceDescription>
+                {expData.description.map((desc) => (
+                  <ExperienceDescriptionItem>
+                    <div className="item-dot" />
+                    <p className="text-desc">{desc}</p>
+                  </ExperienceDescriptionItem>
+                ))}
+              </ExperienceDescription>
+            </div>
+          </ExperienceContent>
+        ))}
+      </ExperienceHistoryContainerContent>{" "}
     </ExperienceHistoryContainer>
   );
 };
