@@ -27,9 +27,10 @@ const Hero = () => {
         <DevName>Batista Olivera</DevName>
         <DevRole>FullStack Developer</DevRole>
         <HeroText>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-          autem. Distinctio doloremque dolores natus consequatur. Inventore quo
-          adipisci tempora sequi.
+          I have +3 years of experiences building a great and complext web
+          applications [Front-End], server side application [Back-End],
+          responsiveness web applications with fluid layout and integrated with
+          external services.
         </HeroText>
         <CustomButton onClick={() => setShowModal(true)}>
           play my introduction

@@ -1,12 +1,20 @@
 import React from "react";
-import { ContactContainer, ContactMessage } from "./styles";
+import {
+  ContactContainer,
+  ContactMessage,
+  ContactEmail,
+  ContactPhome,
+} from "./styles";
 
 const Contact = () => {
   return (
     <ContactContainer>
-      <ContactMessage>
-        Feel Free To Reach Me, I'm Open To More Opportunities
-      </ContactMessage>
+      <ContactMessage>Feel Free To Reach Me</ContactMessage>
+      <ContactMessage>I'm Open To More Opportunities</ContactMessage>
+      <ContactEmail href="mailto:batistatomeoliveira96@gmail.com">
+        batistatomeoliveira96@gmail.com
+      </ContactEmail>
+      <ContactPhome>+244941551087 / +244952120285</ContactPhome>
     </ContactContainer>
   );
 };

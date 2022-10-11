@@ -14,3 +14,11 @@ export const ContactMessage = styled.h1`
   color: ${(props) => props.theme.colors.primaryWhite};
   margin-bottom: 20px;
 `;
+
+export const ContactEmail = styled.a`
+  font-size: 1.2rem;
+  color: ${(props) => props.theme.colors.primaryWhite};
+  margin-bottom: 20px;
+`;
+
+export const ContactPhome = styled(ContactEmail)``;
