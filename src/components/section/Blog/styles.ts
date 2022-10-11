@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const BlogContainer = styled.div`
   width: 100%;
   height: auto;
+  min-height: 100%;
 `;
 
 export const BlogTitle = styled.h1`

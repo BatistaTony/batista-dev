@@ -83,7 +83,11 @@ const ExperienceHistory = () => {
             <div className="time-content">
               <ExperienceCompanyName>
                 {expData.position} @
-                <a href={`${expData.company.website}`}>
+                <a
+                  href={`${expData.company.website}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {expData.company.name}
                 </a>
               </ExperienceCompanyName>

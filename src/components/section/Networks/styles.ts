@@ -8,7 +8,8 @@ export const NetworksContainer = styled.div`
   align-items: center;
 `;
 
-export const NetWorkItem = styled.div`
+export const NetWorkItem = styled.a`
+  text-decoration: none;
   width: 40px;
   height: 40px;
   background-color: ${(props) => props.theme.colors.primaryWhite};
@@ -22,6 +23,7 @@ export const NetWorkItem = styled.div`
 
   svg {
     transform: scale(1.6);
+    text-decoration: none;
   }
 
   &:hover {

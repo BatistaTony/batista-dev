@@ -10,19 +10,21 @@ import {
 } from "react-icons/tb";
 
 const NETWORK_LIST = [
-  { icon: <TbBrandFacebook />, url: "facebook" },
-  { icon: <TbBrandInstagram />, url: "instagram" },
-  { icon: <TbBrandTwitter />, url: "twitter" },
-  { icon: <TbBrandLinkedin />, url: "linkDin" },
-  { icon: <TbBrandMedium />, url: "medium" },
-  { icon: <TbBrandGithub />, url: "github" },
+  { icon: <TbBrandFacebook />, url: "https://facebook" },
+  { icon: <TbBrandInstagram />, url: "https://instagram" },
+  { icon: <TbBrandTwitter />, url: "https://twitter" },
+  { icon: <TbBrandLinkedin />, url: "https://linkDin" },
+  { icon: <TbBrandMedium />, url: "https://medium" },
+  { icon: <TbBrandGithub />, url: "https://github" },
 ];
 
 const Networks = () => {
   return (
     <NetworksContainer>
-      {NETWORK_LIST.map((newtWork) => (
-        <NetWorkItem key={newtWork.url}>{newtWork.icon}</NetWorkItem>
+      {NETWORK_LIST.map((newtwork) => (
+        <NetWorkItem href={newtwork.url} target="_blank" key={newtwork.url}>
+          {newtwork.icon}
+        </NetWorkItem>
       ))}
     </NetworksContainer>
   );

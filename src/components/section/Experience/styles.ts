@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const ExperienceHistoryContainer = styled.div`
   width: 100%;
+  height: auto;
+  min-height: 100%;
 `;
 
 export const ExperienceHistoryContainerContent = styled.div`

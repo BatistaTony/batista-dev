@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Footer from "../section/Footer";
 import { Navbar } from "../section/Navbar";
 import Networks from "../section/Networks";
 import { LayoutContainer, ButtonBarIndicator } from "./styles";
@@ -38,7 +39,10 @@ export const Layout = ({ children }: LayoutProps) => {
       <div className="left-side-bar">
         <ButtonBarIndicator />
       </div>
-      <div className="content">{children}</div>
+      <div className="content">
+        {children}
+        <Footer />
+      </div>
       <div className="right-side-bar">
         <Networks />
         <ButtonBarIndicator />

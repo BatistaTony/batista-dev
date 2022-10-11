@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import {
   AboutPage,
   BlogPage,
+  ContactPage,
   ExperiencePage,
   HomePage,
   ProjectsPage,
@@ -25,6 +26,8 @@ function App() {
           <Route path="/projects" element={<ProjectsPage />} />
 
           <Route path="/blog" element={<BlogPage />} />
+
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </ThemeProvider>{" "}
     </div>

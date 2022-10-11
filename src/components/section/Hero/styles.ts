@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 
 export const HeroContainer = styled.div`
   box-sizing: border-box;
+  height: auto;
+  min-height: 100%;
 `;
 
 export const InfoContainer = styled.div``;
