@@ -39,3 +39,8 @@ export interface Post {
   topics: string[];
   content: unknown;
 }
+
+export interface NetworkType {
+  icon: JSX.Element;
+  url: string;
+}

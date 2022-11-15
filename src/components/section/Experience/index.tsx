@@ -13,59 +13,15 @@ import {
   HistoryTimeLine,
 } from "./styles";
 import { GoLocation } from "react-icons/go";
+import { experiences } from "./../../../static-data/experience";
 
 const ExperienceHistory = () => {
-  const [experienceHistoryData, setExperienceHistoryData] = useState<
-    ExperienceHistoryType[]
-  >([
-    {
-      id: "2",
-      company: { name: "Hero99", website: "https://www.hero99.com.br" },
-      position: "Front End Developer",
-      date: {
-        from: "2021",
-        to: "2022",
-      },
-      description: [
-        "Translate the UI made by designer to a functional web application.",
-        "Do a pair programming with team to solve issues.",
-        "Refactor a lot of components on production.",
-        "Improve existent code of some components, adding clean code and make more reusable components.",
-        "Meeting with designer’s team to discuss ideas of new features.",
-        "Write tests for components.",
-      ],
-      address: "Brasil, Curitiba",
-      isRemote: true,
-      contractType: ContractType.Fulltime,
-    },
-    {
-      id: "1",
-      company: {
-        name: "Andromeda Labs",
-        website: "https://www.andromedalabs.com.ao",
-      },
-      position: "Front End Developer",
-      date: {
-        from: "2019",
-        to: "2021",
-      },
-      description: [
-        "Manage complex details about projects that require analyzing design requirements, recommending technical solutions to make projects scalable, maintainable and efficient.",
-        "Translate graphic visual and interactive designs into presentation layer for highly interactive web applications using responsive design and development techniques.",
-        "Innovate with new ideas, research relevant tools and methodologies and implement proofs of concept.",
-        "Work closely with team and designers to meet project requirements, goals and desired functionality.",
-        "Work with agile framework Scrum and Kanban.",
-        "Resolve issues and navigates obstacles to deliver work product.",
-      ],
-      address: "Angola, Luanda",
-      isRemote: true,
-      contractType: ContractType.Fulltime,
-    },
-  ]);
+  const [experienceHistoryData, setExperienceHistoryData] =
+    useState<ExperienceHistoryType[]>(experiences);
 
   return (
     <ExperienceHistoryContainer>
-      <ExperienceTitle>work experiences</ExperienceTitle>
+      <ExperienceTitle>💼 my work experiences</ExperienceTitle>
       <ExperienceHistoryContainerContent>
         {experienceHistoryData.map((expData) => (
           <ExperienceContent key={expData.id}>
@@ -100,7 +56,7 @@ const ExperienceHistory = () => {
                 {expData.isRemote && (
                   <>
                     <div className="dot" />
-                    <span> {"[fully remote]"}</span>
+                    <span> {"Fully Remote"}</span>
                   </>
                 )}
               </ExperienceCompanyTime>

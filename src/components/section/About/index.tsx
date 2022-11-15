@@ -11,43 +11,22 @@ import {
   Picture,
   SkillItem,
 } from "./styles";
+import { aboutData } from "./../../../static-data/about";
 
 const About = () => {
-  const skills = [
-    { title: "React", icon: "react-original" },
-    { title: "Typescript", icon: "typescript-original" },
-    { title: "Javascript", icon: "javascript-plain" },
-    { title: "Redux", icon: "redux-original" },
-  ];
+  const skills = aboutData.skills;
 
   return (
     <AboutContainer>
       <AboutContentContainer>
         <AboutInfoContainer>
-          <AboutTitle>A little bit about me.</AboutTitle>
+          <AboutTitle>📜 A little bit about me.</AboutTitle>
 
-          <AboutText>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A eius
-            perspiciatis soluta eos omnis ullam voluptatem molestiae laborum
-            iusto! Atque, eius facere? Suscipit explicabo voluptatum totam at,
-            commodi ullam officia! perspiciatis soluta eos omnis ullam
-            voluptatem molestiae laborum iusto! Atque, eius facere? Suscipit
-            explicabo voluptatum totam at, commodi ullam officia!
-          </AboutText>
+          <AboutText>{aboutData.text1}</AboutText>
 
-          <AboutText className="text1">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos hic
-            sint, voluptatem nesciunt voluptatibus in officiis ab illum commodi
-            laborum. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Eos hic sint, voluptatem nesciunt voluptatibus in officiis ab illum
-            commodi laborum.
-          </AboutText>
+          <AboutText className="text1">{aboutData.text2}</AboutText>
 
-          <AboutText className="text2">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos hic
-            sint, voluptatem nesciunt voluptatibus in officiis ab illum commodi
-            laborum.
-          </AboutText>
+          <AboutText className="text2">{aboutData.text3}</AboutText>
 
           <AboutSkillsContainer>
             {skills.map((skill) => (
@@ -60,7 +39,7 @@ const About = () => {
         </AboutInfoContainer>
         <AboutPictureContainer>
           <BehindPicture />
-          <Picture src="/pic.png" />
+          <Picture src="/pic1.jpg" />
         </AboutPictureContainer>
       </AboutContentContainer>
     </AboutContainer>

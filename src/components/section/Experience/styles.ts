@@ -76,7 +76,7 @@ export const ExperienceYearsItem = styled.div<ExperienceYearsItemProps>`
 
 export const ExperienceContent = styled.div`
   display: grid;
-  grid-template-columns: 60px auto 15px;
+  grid-template-columns: 100px auto 15px;
   margin-bottom: 25px;
   padding: 10px;
   padding-bottom: 30px;
@@ -135,8 +135,10 @@ export const HistoryTimeLine = styled.div`
     justify-content: space-between;
 
     p {
+      width: 80px;
       font-size: 1.1rem;
       color: ${(props) => props.theme.colors.primaryWhite};
+      text-align: right;
     }
   }
 

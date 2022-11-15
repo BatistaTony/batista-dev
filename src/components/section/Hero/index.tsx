@@ -14,6 +14,7 @@ import {
   InfoContainer,
 } from "./styles";
 import { AiOutlineClose } from "react-icons/ai";
+import { aboutData } from "./../../../static-data/about";
 
 const VIDEO_INTRODUCTION = "https://www.youtube.com/embed/5L4DQfVIcdg";
 
@@ -26,12 +27,7 @@ const Hero = () => {
         <GreetingsText>Hello Friend !, I'm</GreetingsText>
         <DevName>Batista Olivera</DevName>
         <DevRole>FullStack Developer</DevRole>
-        <HeroText>
-          I have +3 years of experiences building a great and complext web
-          applications [Front-End], server side application [Back-End],
-          responsiveness web applications with fluid layout and integrated with
-          external services.
-        </HeroText>
+        <HeroText>{aboutData.heroText}</HeroText>
         <CustomButton onClick={() => setShowModal(true)}>
           play my introduction
         </CustomButton>

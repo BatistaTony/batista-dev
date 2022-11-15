@@ -1,27 +1,13 @@
 import React from "react";
 import { NetworksContainer, NetWorkItem } from "./styles";
-import {
-  TbBrandFacebook,
-  TbBrandInstagram,
-  TbBrandLinkedin,
-  TbBrandTwitter,
-  TbBrandMedium,
-  TbBrandGithub,
-} from "react-icons/tb";
+import { NETWORK_LIST } from "./../../../static-data/networks";
 
-const NETWORK_LIST = [
-  { icon: <TbBrandFacebook />, url: "https://facebook" },
-  { icon: <TbBrandInstagram />, url: "https://instagram" },
-  { icon: <TbBrandTwitter />, url: "https://twitter" },
-  { icon: <TbBrandLinkedin />, url: "https://linkDin" },
-  { icon: <TbBrandMedium />, url: "https://medium" },
-  { icon: <TbBrandGithub />, url: "https://github" },
-];
+import { NetworkType } from "../../../typescript/types";
 
 const Networks = () => {
   return (
     <NetworksContainer>
-      {NETWORK_LIST.map((newtwork) => (
+      {NETWORK_LIST.map((newtwork: NetworkType) => (
         <NetWorkItem href={newtwork.url} target="_blank" key={newtwork.url}>
           {newtwork.icon}
         </NetWorkItem>
