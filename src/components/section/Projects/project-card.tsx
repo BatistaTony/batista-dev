@@ -33,14 +33,14 @@ const ProjectCard = ({ data }: ProjectCardProps) => {
         <ProjectsCardLinkList>
           {!!data.github && (
             <ProjectsCardLinkListItem>
-              <a href={data.github} target="">
+              <a href={data.github} target="_blank" rel="noreferrer">
                 <TbBrandGithub />
               </a>
             </ProjectsCardLinkListItem>
           )}
           <ProjectsCardLinkListItem>
             {!!data.liveUrl && (
-              <a href={data.liveUrl} target="">
+              <a href={data.liveUrl} target="_blank" rel="noreferrer">
                 <TbGlobe />
               </a>
             )}

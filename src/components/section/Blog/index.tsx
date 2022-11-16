@@ -2,18 +2,10 @@ import React, { useState } from "react";
 import { Post } from "../../../typescript/types";
 import ArticleCard from "../../ui/ArticleCard";
 import { BlogContainer, BlogTitle, PostList } from "./styles";
+import { posts as postsData } from "./../../../static-data/posts";
 
 export const Blog = () => {
-  const [posts, setPosts] = useState<Post[]>([
-    {
-      id: "353k5h4kjg",
-      author: "Batista Tone",
-      content: "",
-      date: new Date(),
-      title: "React for mobile applications",
-      topics: ["React", "Android", "ios", "redux", "context api"],
-    },
-  ]);
+  const [posts, setPosts] = useState<Post[]>(postsData);
 
   return (
     <BlogContainer>

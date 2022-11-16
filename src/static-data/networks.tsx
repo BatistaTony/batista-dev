@@ -13,6 +13,6 @@ export const NETWORK_LIST = [
     icon: <TbBrandLinkedin />,
     url: "https://www.linkedin.com/in/batista-tone-530305157/",
   },
-  { icon: <TbBrandMedium />, url: "https://medium" },
+  { icon: <TbBrandMedium />, url: "https://medium.com/@batistatomeoliveira96" },
   { icon: <TbBrandGithub />, url: "http://github.com/BatistaTony" },
 ];

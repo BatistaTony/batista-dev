@@ -52,6 +52,18 @@ export const ArticleCardFooter = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  .btn-read-external-link {
+    text-decoration: none;
+    background: white;
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
 `;
 
 export const ArticleCardTopics = styled.ul`

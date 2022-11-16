@@ -38,6 +38,8 @@ export interface Post {
   title: string;
   topics: string[];
   content: unknown;
+  url?: string;
+  readingTime: string;
 }
 
 export interface NetworkType {

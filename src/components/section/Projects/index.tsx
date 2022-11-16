@@ -6,37 +6,10 @@ import {
 } from "./styles";
 import ProjectCard from "./project-card";
 import { Project } from "../../../typescript/types";
+import { projects as projectsData } from "./../../../static-data/projects";
 
 const Projects = () => {
-  const [projects, setProjects] = useState<Project[]>([
-    {
-      id: "1",
-      title: "Test Mode",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum dolor asperiores beatae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa quos reiciendis odit dolorem totam error nostrum nulla deserunt, numquam excepturi ipsum sequi quasi facilis doloremque iste debitis sit quae ",
-      github: "https://github.com/project",
-      liveUrl: "https://wwww.google.com",
-      tools: ["React", "Redux", "Css", "Firebase"],
-    },
-    {
-      id: "2",
-      title: "Test Mode",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum dolor asperiores beatae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa quos reiciendis odit dolorem totam error nostrum nulla deserunt, numquam excepturi ipsum sequi quasi facilis doloremque iste debitis sit quae ",
-      github: "https://github.com/project",
-      liveUrl: "https://wwww.google.com",
-      tools: ["React", "Redux", "Css", "Firebase"],
-    },
-    {
-      id: "3",
-      title: "Test Mode",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum dolor asperiores beatae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa quos reiciendis odit dolorem totam error nostrum nulla deserunt, numquam excepturi ipsum sequi quasi facilis doloremque iste debitis sit quae ",
-      github: "https://github.com/project",
-      liveUrl: "https://wwww.google.com",
-      tools: ["React", "Redux", "Css", "Firebase"],
-    },
-  ]);
+  const [projects, setProjects] = useState<Project[]>(projectsData);
 
   return (
     <ProjectsContainer>
