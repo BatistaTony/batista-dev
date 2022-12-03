@@ -50,6 +50,21 @@ export const LayoutContainer = styled.div`
     padding-left: 200px;
     padding-right: 200px;
     padding-bottom: 30px;
+
+    @media (max-width: 1300px) {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
+    @media (max-width: 1100px) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @media (max-width: 805px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 
   .right-side-bar {

@@ -7,21 +7,69 @@ export const HeroContainer = styled.div`
   min-height: 100%;
 `;
 
-export const InfoContainer = styled.div``;
+export const InfoContainer = styled.div`
+  @media (max-width: 805px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+`;
 
 export const GreetingsText = styled.p`
   font-size: 2rem;
   color: ${(props) => props.theme.colors.primaryWhite};
+
+  @media (max-width: 1000px) {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 805px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 export const DevName = styled.h1`
   font-size: 3.5rem;
   color: ${(props) => props.theme.colors.primaryWhite};
+
+  @media (max-width: 1000px) {
+    font-size: 3.2rem;
+  }
+
+  @media (max-width: 805px) {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+  }
 `;
 
 export const DevRole = styled.h1`
   font-size: 5rem;
   color: ${(props) => props.theme.colors.primaryWhite};
+
+  @media (max-width: 1000px) {
+    font-size: 4.5rem;
+  }
+
+  @media (max-width: 935px) {
+    font-size: 4rem;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 3.7rem;
+  }
+
+  @media (max-width: 805px) {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  @media (max-width: 805px) {
+    font-size: 2.5rem;
+  }
 `;
 
 export const HeroText = styled.p`
@@ -29,6 +77,16 @@ export const HeroText = styled.p`
   color: ${(props) => props.theme.colors.primaryWhite};
   margin-top: 15px;
   width: 70%;
+
+  @media (max-width: 1000px) {
+    width: 85%;
+  }
+
+  @media (max-width: 805px) {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
 `;
 
 export const HeroButton = styled.button`
