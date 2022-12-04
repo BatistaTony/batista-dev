@@ -27,20 +27,20 @@ const About = () => {
           <AboutText className="text1">{aboutData.text2}</AboutText>
 
           <AboutText className="text2">{aboutData.text3}</AboutText>
-
-          <AboutSkillsContainer>
-            {skills.map((skill) => (
-              <SkillItem key={skill.title}>
-                <i className={`devicon-${skill.icon}`}></i>
-                {skill.title}
-              </SkillItem>
-            ))}
-          </AboutSkillsContainer>
         </AboutInfoContainer>
         <AboutPictureContainer>
           <BehindPicture />
           <Picture src="/pic1.jpg" />
         </AboutPictureContainer>
+
+        <AboutSkillsContainer>
+          {skills.map((skill) => (
+            <SkillItem key={skill.title}>
+              <i className={`devicon-${skill.icon}`}></i>
+              {skill.title}
+            </SkillItem>
+          ))}
+        </AboutSkillsContainer>
       </AboutContentContainer>
     </AboutContainer>
   );

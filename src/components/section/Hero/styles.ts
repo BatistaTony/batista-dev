@@ -28,6 +28,10 @@ export const GreetingsText = styled.p`
     width: 100%;
     text-align: center;
   }
+
+  @media (max-width: 550px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const DevName = styled.h1`
@@ -42,6 +46,9 @@ export const DevName = styled.h1`
     width: 100%;
     text-align: center;
     font-size: 2.5rem;
+  }
+  @media (max-width: 550px) {
+    font-size: 2rem;
   }
 `;
 
@@ -70,6 +77,10 @@ export const DevRole = styled.h1`
   @media (max-width: 805px) {
     font-size: 2.5rem;
   }
+
+  @media (max-width: 550px) {
+    font-size: 2rem;
+  }
 `;
 
 export const HeroText = styled.p`
@@ -87,6 +98,10 @@ export const HeroText = styled.p`
     text-align: center;
     font-size: 1.1rem;
   }
+
+  @media (max-width: 550px) {
+    font-size: 1rem;
+  }
 `;
 
 export const HeroButton = styled.button`
@@ -100,6 +115,10 @@ export const HeroButton = styled.button`
   border-radius: 14px;
   margin-top: 40px;
   cursor: pointer;
+
+  @media (max-width: 550px) {
+    width: 80%;
+  }
 `;
 
 export const VideoContainer = styled(motion.div)`
@@ -114,6 +133,11 @@ export const VideoContainer = styled(motion.div)`
     width: 100%;
     height: 100%;
     background: #1e1d40;
+  }
+
+  @media (max-width: 950px) {
+    width: 80%;
+    height: 60vh;
   }
 `;
 

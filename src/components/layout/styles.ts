@@ -7,6 +7,10 @@ export const LayoutContainer = styled.div`
   grid-template-columns: 80px auto 80px;
   grid-template-rows: 12vh 88vh;
 
+  .footer-component {
+    display: none;
+  }
+
   .navbar {
     width: 100%;
     height: 90px;
@@ -20,6 +24,7 @@ export const LayoutContainer = styled.div`
     background: transparent;
     position: fixed;
     top: 0;
+    left: 0;
     transition: top 0.3s;
     z-index: 7;
     background: #d90d32;
@@ -38,6 +43,10 @@ export const LayoutContainer = styled.div`
     bottom: 0;
     left: 0;
     z-index: 3;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 
   .content {
@@ -65,6 +74,13 @@ export const LayoutContainer = styled.div`
       padding-left: 10px;
       padding-right: 10px;
     }
+
+    @media (max-width: 550px) {
+      padding-left: 20px;
+      padding-right: 20px;
+      position: absolute;
+      padding-top: 200px;
+    }
   }
 
   .right-side-bar {
@@ -80,6 +96,10 @@ export const LayoutContainer = styled.div`
     bottom: 0;
     right: 0;
     z-index: 3;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 `;
 

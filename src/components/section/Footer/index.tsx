@@ -3,7 +3,7 @@ import { FooterContainer } from "./styles";
 
 const Footer = () => {
   return (
-    <FooterContainer>
+    <FooterContainer className="footer-component">
       <p>Made by me with ❤️</p>
     </FooterContainer>
   );

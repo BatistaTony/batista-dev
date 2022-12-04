@@ -6,7 +6,7 @@ import { NetworkType } from "../../../typescript/types";
 
 const Networks = () => {
   return (
-    <NetworksContainer>
+    <NetworksContainer className="networks-c">
       {NETWORK_LIST.map((newtwork: NetworkType) => (
         <NetWorkItem href={newtwork.url} target="_blank" key={newtwork.url}>
           {newtwork.icon}

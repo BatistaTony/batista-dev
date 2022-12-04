@@ -3,18 +3,22 @@ import Footer from "../section/Footer";
 import { Navbar } from "../section/Navbar";
 import Networks from "../section/Networks";
 import { LayoutContainer, ButtonBarIndicator } from "./styles";
+import { useMediaQuery } from "react-responsive";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 export const Layout = ({ children }: LayoutProps) => {
+  const isMobile = useMediaQuery({
+    query: "(max-width:750px)",
+  });
+
   useEffect(() => {
     let prevScrollpos = window.pageYOffset;
 
-    console.log(prevScrollpos);
-
     window.onscroll = function () {
+      if (isMobile) return;
       var currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         (document as unknown as any).getElementById("navbar").style.top = "0";
