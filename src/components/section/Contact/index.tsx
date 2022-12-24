@@ -1,4 +1,5 @@
 import React from "react";
+import Networks from "../Networks";
 import {
   ContactContainer,
   ContactMessage,
@@ -15,6 +16,8 @@ const Contact = () => {
         batistatomeoliveira96@gmail.com
       </ContactEmail>
       <ContactPhome>+244941551087 / +244952120285</ContactPhome>
+
+      <Networks />
     </ContactContainer>
   );
 };

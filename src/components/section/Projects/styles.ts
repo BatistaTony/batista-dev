@@ -22,11 +22,12 @@ export const ProjectsList = styled.div`
 
 export const ProjectsCard = styled.div`
   width: 100%;
-  height: 270px;
+  height: auto;
   background: ${(props) => props.theme.colors.primaryWhite};
   border-radius: 5px;
   padding: 20px;
-  padding-bottom: 0;
+  min-height: 200px;
+  padding-bottom: 60px;
   box-sizing: border-box;
   margin-right: 30px;
   margin-bottom: 30px;
@@ -43,7 +44,7 @@ export const ProjectsCardDescription = styled.p`
   font-size: 1rem;
   margin-top: 10px;
   width: 100%;
-  height: 130px;
+  min-height: auto;
   text-overflow: ellipsis;
   white-space: pre-wrap;
   overflow: hidden;
@@ -68,6 +69,7 @@ export const ProjectsCardSkillsListItem = styled.li`
   padding-left: 10px;
   padding-right: 10px;
   margin-right: 10px;
+  margin-top: 10px;
 `;
 
 export const ProjectsCardFooter = styled.div`

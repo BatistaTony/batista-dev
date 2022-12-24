@@ -16,6 +16,18 @@ export const ExperienceTitle = styled.div`
   font-size: 3rem;
   color: ${(props) => props.theme.colors.primaryWhite};
   margin-bottom: 20px;
+
+  @media (max-width: 700px) {
+    font-size: 2.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 export const ExperienceYears = styled.div`
@@ -82,6 +94,10 @@ export const ExperienceContent = styled.div`
   padding-bottom: 30px;
   border-radius: 5px;
 
+  @media (max-width: 970px) {
+    grid-template-columns: 100%;
+  }
+
   .time-content {
     margin-left: 15px;
   }
@@ -91,6 +107,10 @@ export const ExperienceContent = styled.div`
     justify-content: flex-end;
     align-items: flex-end;
     padding: 0px;
+
+    @media (max-width: 970px) {
+      display: none;
+    }
 
     .time-line-start-dot,
     .time-line-end-dot {
@@ -128,11 +148,23 @@ export const HistoryTimeLine = styled.div`
   padding-top: 12px;
   padding-bottom: 20px;
 
+  @media (max-width: 970px) {
+    grid-template-columns: auto;
+    padding-bottom: 0;
+    display: none;
+  }
+
   .years-time-line {
     height: 104%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: 970px) {
+      flex-direction: row;
+      width: 100%;
+      background: red;
+    }
 
     p {
       width: 80px;
@@ -150,6 +182,10 @@ export const HistoryTimeLine = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 970px) {
+      display: none;
+    }
   }
 
   .time-line-start-dot,
@@ -191,6 +227,10 @@ export const ExperienceCompanyTime = styled.p`
   align-items: center;
   margin-top: 10px;
 
+  @media (max-width: 970px) {
+    flex-wrap: wrap;
+  }
+
   svg {
     transform: scale(1);
     padding-top: 4px;
@@ -201,6 +241,27 @@ export const ExperienceCompanyTime = styled.p`
     box-shadow: 0 0 5px rgb(0, 0, 0.3);
     padding: 5px 10px 5px 10px;
     border-radius: 8px;
+  }
+
+  .mobile-date {
+    margin-top: 12px;
+
+    @media (min-width: 970px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 970px) {
+    span,
+    .dot {
+      margin-top: 12px;
+    }
+  }
+
+  @media (min-width: 970px) {
+    .dot-mobile {
+      display: none;
+    }
   }
 
   .dot {
@@ -214,7 +275,7 @@ export const ExperienceCompanyTime = styled.p`
 `;
 
 export const ExperienceDescription = styled.div`
-  margin-top: 15px;
+  margin-top: 35px;
 
   #goo {
     background: red;
@@ -224,7 +285,7 @@ export const ExperienceDescription = styled.div`
 export const ExperienceDescriptionItem = styled.div`
   display: grid;
   grid-template-columns: 10px auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   position: relative;
 
   .item-dot {
@@ -246,7 +307,15 @@ export const ExperienceDescriptionItem = styled.div`
     box-shadow: 0 0 5px rgb(0, 0, 0.3);
     border-radius: 8px;
 
-    &::focus {
+    @media (max-width: 970px) {
+      width: 90%;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+
+    &:focus {
       outline: 0;
     }
   }

@@ -4,11 +4,10 @@ export const ArticleCardContainer = styled.div`
   width: 100%;
   background: ${(props) => props.theme.colors.bg};
   height: auto;
-  max-height: 270px;
+  /* min-height: 270px; */
   border-radius: 8px;
   overflow: hidden;
   padding: 20px;
-  padding-bottom: 10px;
   position: relative;
   cursor: pointer;
 `;
@@ -28,6 +27,12 @@ export const ArticleCardHeader = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 `;
 
 export const ArticleCardTitle = styled.h1`
@@ -36,6 +41,10 @@ export const ArticleCardTitle = styled.h1`
 
 export const ArticleCardDate = styled.p`
   color: #f2e6d8;
+
+  @media (max-width: 1000px) {
+    margin-top: 5px;
+  }
 `;
 
 export const ArticleCardText = styled.p`
@@ -46,12 +55,20 @@ export const ArticleCardText = styled.p`
 
 export const ArticleCardFooter = styled.div`
   width: 100%;
-  height: 40px;
+  height: auto;
   margin-top: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  /* position: absolute;
+  bottom: 10px; */
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
   .btn-read-external-link {
     text-decoration: none;
@@ -63,6 +80,10 @@ export const ArticleCardFooter = styled.div`
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+
+    @media (max-width: 800px) {
+      margin-top: 15px;
+    }
   }
 `;
 
@@ -71,6 +92,7 @@ export const ArticleCardTopics = styled.ul`
   flex-direction: row;
   align-items: center;
   list-style: none;
+  flex-wrap: wrap;
 `;
 
 export const ArticleCardTopicsItem = styled.li`
@@ -84,9 +106,11 @@ export const ArticleCardTopicsItem = styled.li`
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 10px;
 `;
 
 export const ArticleReadingTime = styled.p`
+  min-width: 80px;
   width: auto;
   height: 30px;
   background: #d90d32;
@@ -97,8 +121,12 @@ export const ArticleReadingTime = styled.p`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 0 8px 0 8px;
+  padding: 0 10px 0 10px;
   color: #f2e6d8;
+
+  @media (max-width: 800px) {
+    margin-top: 15px;
+  }
 
   svg {
     margin-right: 5px;

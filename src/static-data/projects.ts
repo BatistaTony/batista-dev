@@ -31,8 +31,7 @@ The App registers the stores in the system, takes their locations, when they hav
     owner: "Batista Oliveira",
   },
   {
-    description: `
-Piteu is a platform that behave like a network of restaurants, providing a dashboard where restaurants owner can manage their productos and control their sells.`,
+    description: `Piteu is a platform that behave like a network of restaurants, providing a dashboard where restaurants owner can manage their productos and control their sells.`,
     github: "https://github.com/BatistaTony/PiteuApp",
     id: "3",
     liveUrl: "https://piteu.vercel.app/dashboard",

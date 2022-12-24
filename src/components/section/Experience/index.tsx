@@ -58,7 +58,14 @@ const ExperienceHistory = () => {
                     <div className="dot" />
                     <span> {"Fully Remote"}</span>
                   </>
-                )}
+                )}{" "}
+                <>
+                  <div className="dot dot-mobile" />
+
+                  <span className="mobile-date">
+                    {expData.date.from} to {expData.date.to}
+                  </span>
+                </>
               </ExperienceCompanyTime>
 
               <ExperienceDescription>

@@ -16,7 +16,7 @@ import {
 import { AiOutlineClose } from "react-icons/ai";
 import { aboutData } from "./../../../static-data/about";
 
-const VIDEO_INTRODUCTION = "https://www.youtube.com/embed/5L4DQfVIcdg";
+const VIDEO_INTRODUCTION = "https://www.youtube.com/embed/5L4DQfVI454";
 
 const Hero = () => {
   const [showModal, setShowModal] = useState(false);
@@ -29,7 +29,7 @@ const Hero = () => {
         <DevRole>FullStack Developer</DevRole>
         <HeroText>{aboutData.heroText}</HeroText>
         <CustomButton onClick={() => setShowModal(true)}>
-          play my introduction
+          Introduction video
         </CustomButton>
         <AnimatePresence>
           {showModal && (
