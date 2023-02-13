@@ -26,7 +26,7 @@ const Hero = () => {
       <InfoContainer>
         <GreetingsText>Hello Friend !, I'm</GreetingsText>
         <DevName>Batista Olivera</DevName>
-        <DevRole>FullStack Developer</DevRole>
+        <DevRole>FullStack Developer & Content Creator</DevRole>
         <HeroText>{aboutData.heroText}</HeroText>
         <CustomButton onClick={() => setShowModal(true)}>
           Introduction video

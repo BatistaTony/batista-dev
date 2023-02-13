@@ -4,9 +4,9 @@ const actualYear = new Date().getFullYear();
 const actualAge = actualYear - myBirthYear;
 
 export const aboutData = {
-  heroText: `I have +3 years of experiences building a great and complext web applications (Front-End), server side application (Back-End), responsiveness web applications with fluid layout and integrated with external services.`,
+  heroText: `I have +3 years of experiences building a great and complext web applications (Front-End), server side application (Back-End), responsiveness web applications with fluid layout and integrated with external services. I also create content of programming of computer, especially web development techs like Reactjs and Typescript and so on.`,
 
-  text1: `My name is Batista Tome Oliveira, I have ${actualAge} years old I’m professional software developer with 3+ years of experiences, 
+  text1: `My name is Batista Tome Oliveira, I have ${actualAge} years old I’m professional software developer with 3+ years of experiences, I'm content creator of programming computer techs
 
             Currently I’m doing my second semester of bachelor of computer Science at University of Applied Sciences of German.
 
